@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #70c5ce;
+    font-family: sans-serif;
+}
+
+#game-container {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    background-color: #fff;
+    overflow: hidden;
+    border: 2px solid #000;
+}
+
+#bird {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    border-radius: 50%;
+    top: 200px;
+    left: 50px;
+    transition: width 0.2s, height 0.2s;
+}
+
+.pipe {
+    position: absolute;
+    width: 60px;
+    background-color: green;
+    transition: height 0.2s;
+}
+
+#pipe-top {
+    top: 0;
+    left: 300px;
+}
+
+#pipe-bottom {
+    bottom: 0;
+    left: 300px;
+}
+
+/* Bird size variations */
+.bird-small {
+    width: 20px;
+    height: 20px;
+}
+
+.bird-large {
+    width: 40px;
+    height: 40px;
+}
+
+/* Pipe size variations */
+.pipe-narrow {
+    width: 40px;
+}
+
+.pipe-wide {
+    width: 80px;
+}
+
+/* Score displays */
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+#high-score {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+#retry-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#game-container {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    background-color: #87CEEB; /* Change to your desired background color */
+    overflow: hidden;
+    border: 2px solid #000;
+}
+
+/* Adjust game container size to fit smaller screens */
+#game-container {
+    width: 90%;
+    max-width: 400px; /* Adjust max-width as needed */
+    height: 60vh; /* Adjust height as needed */
+}
+
+/* Adjust bird size for smaller screens */
+#bird {
+    width: 5vw; /* Adjust size relative to viewport width */
+    height: 5vw; /* Adjust size relative to viewport width */
+}
+
+/* Adjust pipe size for smaller screens */
+.pipe {
+    width: 10vw; /* Adjust size relative to viewport width */
+}
+
+/* Adjust score display for smaller screens */
+#score,
+#high-score {
+    font-size: 3vw; /* Adjust font size relative to viewport width */
+}
+
