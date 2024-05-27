@@ -24,20 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const pipeTopHeight = Math.floor(Math.random() * (maxPipeHeight - minPipeHeight + 1)) + minPipeHeight;
         const pipeBottomHeight = gameContainer.offsetHeight - pipeTopHeight - gap;
 
-        pipeTop.style.height = pipeTopHeight + 'px'; // Added quotes and + sign
-        pipeBottom.style.height = pipeBottomHeight + 'px'; // Added quotes and + sign
+        pipeTop.style.height = pipeTopHeight + 'px';
+        pipeBottom.style.height = pipeBottomHeight + 'px';
     }
 
     function startGame() {
         document.addEventListener('keydown', fly);
-        gameContainer.addEventListener('click', fly); // Added touch event listener
+        gameContainer.addEventListener('click', fly);
 
         const gameLoop = setInterval(() => {
             if (gameOver) {
                 clearInterval(gameLoop);
                 if (score > highScore) {
                     highScore = score;
-                    highScoreDisplay.textContent = 'High Score: ' + highScore; // Updated concatenation
+                    highScoreDisplay.textContent = 'High Score: ' + highScore;
                 }
                 retryButton.style.display = 'block';
                 newGameButton.style.display = 'none';
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 pipeBottom.style.left = gameContainer.offsetWidth + 'px';
                 randomizePipeHeights();
                 score++;
-                scoreDisplay.textContent = 'Score: ' + score; // Updated concatenation
+                scoreDisplay.textContent = 'Score: ' + score;
                 if (score === 10 || score === 20 || score === 30 || score === 40 || score === 50 || score === 60) {
                     increaseDifficulty();
                 }
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function fly(event) {
         if (event.code === 'Space' || event.type === 'click') {
             birdY += birdJump;
-            event.preventDefault(); // Prevent default behavior for touch events
+            event.preventDefault();
         }
     }
 
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     retryButton.addEventListener('click', () => {
         score = 0;
-        scoreDisplay.textContent = 'Score: ' + score; // Updated concatenation
+        scoreDisplay.textContent = 'Score: ' + score;
         birdY = 200;
         bird.style.top = birdY + 'px';
         pipeTop.style.left = '300px';
