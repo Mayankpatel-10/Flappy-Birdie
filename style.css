@@ -16,17 +16,13 @@ body {
     overflow: hidden;
     border: 2px solid #000;
 }
-
 #bird {
     position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: yellow;
-    border-radius: 50%;
-    top: 200px;
-    left: 50px;
-    transition: width 0.2s, height 0.2s;
+    top: 200px; /* Adjust this value as needed */
+    left: 50px; /* Adjust this value as needed */
+    transition: transform 0.2s; /* Add transition property */
 }
+
 
 .pipe {
     position: absolute;
